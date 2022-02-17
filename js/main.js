@@ -1,21 +1,31 @@
 import { printError, printREsult } from './printResult.js'
 import getDateDiff from './getDateDiff.js'
+import { switchTabs } from './switchTabs.js';
+import { startTimer } from './startTimer.js';
 
-const form = document.getElementById('datecalc')
+switchTabs();
 
+const calc = document.getElementById('datecalc');
 
-form.onsubmit = (event) => {
-  event.preventDefault();
+calc.onsubmit = (event) => {
+    event.preventDefault();
 
-  const formData = new FormData(event.target)
+    const formData = new FormData(event.target)
 
-  const firsDate = formData.get('firstDate')
-  const secondDate = formData.get('secondDate')
+    const firsDate = formData.get('firstDate')
+    const secondDate = formData.get('secondDate')
 
-  if (!firsDate || !secondDate) {
-    printError('Oooooopppsss - введите текст!!!!')
-  } else {
-    const dateDiff = getDateDiff(firsDate, secondDate)
-    printREsult(dateDiff)
-  }
+    if (!firsDate || !secondDate) {
+        printError('Oooooopppsss - введите текст!!!!')
+    } else {
+        const dateDiff = getDateDiff(firsDate, secondDate)
+        printREsult(dateDiff)
+    }
+}
+
+const start = document.querySelector(".btn-start");
+
+start.onclick = (event) => {
+    event.preventDefault();
+    startTimer();
 }
