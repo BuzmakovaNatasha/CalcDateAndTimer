@@ -1,0 +1,45 @@
+.btn-tabs {
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #0c08f1;
+  border-radius: 5px;
+}
+
+.active {
+  background-color: rgba(31, 59, 182, 0.822);
+  color: #fff;
+}
+
+.timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.timer form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.timer form label {
+  margin-bottom: 10px;
+}
+
+.timer form label input {
+  width: 35px;
+}
+
+.hidden {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

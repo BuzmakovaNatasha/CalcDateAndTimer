@@ -1,0 +1,30 @@
+.btn-tabs {
+    padding: 5px;
+    box-sizing: border-box;
+    border: 2px solid rgb(12, 8, 241);
+    border-radius: 5px;
+}
+
+.active {
+    background-color: rgba(31, 59, 182, 0.822);
+    color: #fff;
+}
+
+.timer {
+    display: flex;
+    flex-direction: column;
+    & form {
+        display: flex;
+        flex-direction: column;
+        & label {
+            margin-bottom: 10px;
+            & input {
+                width: 35px;
+            }
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}
