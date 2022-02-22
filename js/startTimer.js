@@ -1,7 +1,10 @@
+import { Howl } from 'howler';
+import audioGong from '../audio/gong.mp3'
+
 let stop = document.querySelector('.btn-stop');
 
 let audio = new Howl({
-    src: ['./audio/gong.mp3']
+    src: audioGong
 });
 
 export function startTimer() {

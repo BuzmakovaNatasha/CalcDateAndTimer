@@ -1,5 +1,7 @@
-import { printError, printREsult } from './printResult.js'
-import getDateDiff from './getDateDiff.js'
+import '../scss/style.scss'
+
+import { printError, printResult } from './printResult.js'
+import { getDateDiff } from './getDateDiff.js'
 import { switchTabs } from './switchTabs.js';
 import { startTimer } from './startTimer.js';
 
@@ -10,16 +12,16 @@ const calc = document.getElementById('datecalc');
 calc.onsubmit = (event) => {
     event.preventDefault();
 
-    const formData = new FormData(event.target)
+    const formData = new FormData(event.target);
 
-    const firsDate = formData.get('firstDate')
-    const secondDate = formData.get('secondDate')
+    const firsDate = formData.get('firstDate');
+    const secondDate = formData.get('secondDate');
 
     if (!firsDate || !secondDate) {
-        printError('Oooooopppsss - введите текст!!!!')
+        printError('Oooooopppsss - введите обе даты!!!!');
     } else {
-        const dateDiff = getDateDiff(firsDate, secondDate)
-        printREsult(dateDiff)
+        const dateDiff = getDateDiff(firsDate, secondDate);
+        printResult(dateDiff);
     }
 }
 
